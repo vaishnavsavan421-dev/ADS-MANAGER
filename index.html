@@ -5,16 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>META ADS MANAGER</title>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1518127469479731');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1518127469479731&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-  background:#020617; /* dark background */
+  background:#020617;
   height:100vh;
   display:flex;
   align-items:center;
@@ -22,29 +41,21 @@ body{
   color:#fff;
 }
 
-/* OUTER GLOW BOX */
+/* Animated Border Box */
 .glow-box{
-  position:relative;
   padding:3px;
   border-radius:24px;
-  background:linear-gradient(
-    270deg,
-    #00ffff,
-    #3b82f6,
-    #22d3ee,
-    #00ffff
-  );
+  background:linear-gradient(270deg,#00ffff,#3b82f6,#22d3ee,#00ffff);
   background-size:600% 600%;
   animation:borderMove 4s linear infinite;
 }
 
-/* BORDER ANIMATION */
 @keyframes borderMove{
   0%{background-position:0% 50%;}
   100%{background-position:100% 50%;}
 }
 
-/* INNER CONTENT BOX */
+/* Inner Content */
 .container{
   background:#020617;
   padding:30px 25px;
@@ -54,15 +65,14 @@ body{
   text-align:center;
 }
 
-/* HEADLINE */
+/* Headings */
 h1{
   font-size:40px;
   font-weight:800;
   color:#00ffff;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 
-/* SUB HEADLINE */
 h2{
   font-size:15px;
   font-weight:500;
@@ -70,7 +80,7 @@ h2{
   margin-bottom:22px;
 }
 
-/* SERVICES */
+/* Services */
 .services p{
   margin:10px 0;
   padding:12px;
@@ -79,7 +89,7 @@ h2{
   font-size:16px;
 }
 
-/* BUTTON */
+/* Button */
 .btn{
   margin-top:28px;
 }
@@ -96,20 +106,13 @@ h2{
   animation:pulse 1.5s infinite;
 }
 
-/* BUTTON PULSE */
 @keyframes pulse{
-  0%{
-    box-shadow:0 0 0 0 rgba(0,255,255,0.7);
-  }
-  70%{
-    box-shadow:0 0 0 28px rgba(0,255,255,0);
-  }
-  100%{
-    box-shadow:0 0 0 0 rgba(0,255,255,0);
-  }
+  0%{box-shadow:0 0 0 0 rgba(0,255,255,0.7);}
+  70%{box-shadow:0 0 0 28px rgba(0,255,255,0);}
+  100%{box-shadow:0 0 0 0 rgba(0,255,255,0);}
 }
 
-/* FOOTER */
+/* Footer */
 .footer{
   margin-top:22px;
   font-size:12px;
@@ -134,7 +137,9 @@ h2{
     </div>
 
     <div class="btn">
-      <a href="https://t.me/meta_ads_manager1" target="_blank">
+      <a href="https://t.me/meta_ads_manager1"
+         target="_blank"
+         onclick="fbq('track','Contact');">
         MESSAGE NOW
       </a>
     </div>
